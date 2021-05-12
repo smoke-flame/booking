@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Acumin';
+    src: url(../font/Acumin-BdPro.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Acumin';
+    src: url(../font/acumin-light.woff2.ttf);
+    font-weight: 400;
+}
+
+
+
+
+body {
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f3f5f9;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
+}
+
+.container {
+    padding: 0 30px;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+#map,
+#distance {
+    position: relative;
+    width: 100%;
+    height: 47.5vh;
+
+    & button,
+    & .gm-svpc,
+    & .gmnoprint {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+.car-item {
+
+    &.move {
+        transition: transform 1s cubic-bezier(.51, .61, .66, .52);
+
+    }
+
+    z-index: 999999;
+
+}
+
+.car.move {
+    transform: translateX(100px);
+}
+
+div[role="button"],
+div[role="button"] img {
+    display: none;
+}
+
+.menu {
+    top: 30px;
+    left: 30px;
+    position: absolute;
+    z-index: 1000;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(#000000, 0.5);
+
+    & img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.main {
+    position: relative;
+    z-index: 10;
+    padding: 30px 0 50px;
+    background-color: #f3f5f9;
+    margin-top: -40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 -10px 10px rgba(#000000, 0.13);
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    &__title {
+        font-family: 'Acumin';
+        font-weight: 700;
+        font-size: 22px;
+        color: #2c3e54;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    &__input {
+        font-family: 'Acumin';
+        padding: 15px 15px;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        color: #204d85;
+        margin-bottom: 30px;
+        font-weight: 400;
+
+        &::placeholder {
+            color: #293b51;
+            font-weight: 400;
+        }
+    }
+
+    &__distance {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &__picture {
+                margin-right: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__circle {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color: #5563ff;
+                }
+
+                &__dashed {
+                    height: 55px;
+                    border-left: 1px dashed #d2dce8;
+                }
+
+                &__cube {
+                    width: 12px;
+                    height: 12px;
+                    background-color: #000;
+                }
+            }
+
+            &__info {
+                color: #2b3d52;
+
+                &__from {
+
+                    margin-bottom: 30px;
+
+                    &__title {
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+
+                    &__subtitle {
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+                }
+
+                &__to {
+                    &__title {
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+
+                    &__subtitle {
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+
+    &__cars {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+
+            &__icon {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                min-height: 40px;
+                margin-right: 20px;
+
+                & img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__info {
+                &__title {
+                    font-weight: 500;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+
+                &__subtitle {
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #fff;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+    z-index: 100;
+    margin-top: -20px;
+    padding: 30px 0;
+
+    &__title {
+        font-weight: 600;
+        font-size: 22px;
+        color: #2c3e54;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    &__places {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &__icon {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                min-height: 40px;
+                margin-right: 20px;
+                background-color: #5563ff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & img {
+                    max-width: 50%;
+                    height: auto;
+                }
+            }
+
+            &__info {
+                &__title {
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+
+                &__subtitle {
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &__label {
+        margin-top: -10px;
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    &__cars {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+
+        &__item {
+            padding: 30px 0;
+
+            &__inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &__photo {
+                width: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & img {
+                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__info {
+                color: #2b3d52;
+
+                &__name {
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-bottom: 7px;
+                }
+
+                &__text {
+                    font-size: 15px;
+                    font-weight: 300;
+
+                }
+
+
+            }
+
+            &__price {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.confirm {
+    z-index: 999999;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__button {
+        flex: 1;
+        display: block;
+        background-color: #5563ff;
+        border-radius: 15px;
+        padding: 20px 0;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        box-shadow: 0 7px 10px rgba(#5563ff, 0.5);
+    }
+}

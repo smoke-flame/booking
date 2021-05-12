@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="menu">
+          <img src="assets/img/options.svg" alt="options" />
+        </div>
+        <div id="map"></div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <div class="main__inner">
+            <h2 class="main__title">Good Evening Abhinav!</h2>
+            <input
+              type="text"
+              class="main__input"
+              placeholder="Where you going?"
+            />
+
+            <div class="main__cars">
+              <div class="main__cars__item">
+                <div class="main__cars__item__icon">
+                  <img src="assets/img/clock.svg" alt="clock" />
+                </div>
+                <div class="main__cars__item__info">
+                  <div class="main__cars__item__info__title">
+                    Noida Electronic City Metro Station
+                  </div>
+                  <div class="main__cars__item__info__subtitle">
+                    H Block, Sector 62, Noida, Uttar Pradesh..
+                  </div>
+                </div>
+              </div>
+              <div class="main__cars__item">
+                <div class="main__cars__item__icon">
+                  <img src="assets/img/clock.svg" alt="clock" />
+                </div>
+                <div class="main__cars__item__info">
+                  <div class="main__cars__item__info__title">
+                    Logix City Center Mall
+                  </div>
+                  <div class="main__cars__item__info__subtitle">
+                    BW-58, Wave City Center, Sector 32, Noida..
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <h2 class="footer__title">Favourites</h2>
+            <div class="footer__places">
+              <div class="footer__places__item">
+                <div class="footer__places__item__icon">
+                  <img src="assets/img/portfolio.svg" alt="clock" />
+                </div>
+                <div class="footer__places__item__info">
+                  <div class="footer__places__item__info__title">Work</div>
+                  <div class="footer__places__item__info__subtitle">
+                    XYZ Corp Private Limited, New Delphi..
+                  </div>
+                </div>
+              </div>
+              <div class="footer__places__item">
+                <div class="footer__places__item__icon">
+                  <img src="assets/img/portfolio.svg" alt="clock" />
+                </div>
+                <div class="footer__places__item__info">
+                  <div class="footer__places__item__info__title">Home</div>
+                  <div class="footer__places__item__info__subtitle">
+                    XYZ Corp Private Limited, New Delphi..
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLnv2hjU27ykmU1HrByJFkFrl7K-TVdeI&libraries=places&callback=initMap"></script>
+   
+  </body>
+</html>

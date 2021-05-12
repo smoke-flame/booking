@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="menu">
+          <img src="assets/img/back.svg" alt="options" />
+        </div>
+        <div id="distance"></div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <div class="main__inner">
+            <div class="main__distance">
+              <div class="main__distance__item">
+                <div class="main__distance__item__picture">
+                  <div class="main__distance__item__picture__circle"></div>
+                  <div class="main__distance__item__picture__dashed"></div>
+                  <div class="main__distance__item__picture__cube"></div>
+                </div>
+                <div class="main__distance__item__info">
+                  <div class="main__distance__item__info__from">
+                    <div class="main__distance__item__info__from__title">
+                      Logix City Center Mall
+                    </div>
+                    <div class="main__distance__item__info__from__subtitle">
+                      BW-58, Wave City Center, Sector 32, Noida, Uttar Pradesh
+                    </div>
+                  </div>
+                  <div class="main__distance__item__info__to">
+                    <div class="main__distance__item__info__to__title">
+                      Hauz Khas Social
+                    </div>
+                    <div class="main__distance__item__info__to__subtitle">
+                      9A & 12, Hauz Khas Fort Rd, Deer Park, New Delhi
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="footer">
+        <div class="footer__inner">
+          <div class="footer__label">Choose a trip or swipe up for more</div>
+          <div class="footer__cars">
+            <div class="footer__cars__item">
+              <div class="container">
+                <div class="footer__cars__item__inner">
+                  <div class="footer__cars__item__photo">
+                    <img src="assets/img/car.png" alt="car" />
+                  </div>
+                  <div class="footer__cars__item__info">
+                    <div class="footer__cars__item__info__name">Hatchback</div>
+                    <div class="footer__cars__item__info__text">
+                      12:56 AM drop off
+                    </div>
+                  </div>
+                  <div class="footer__cars__item__price">&#8377;345.12</div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__cars__item">
+              <div class="container">
+                <div class="footer__cars__item__inner">
+                  <div class="footer__cars__item__photo">
+                    <img src="assets/img/car.png" alt="car" />
+                  </div>
+                  <div class="footer__cars__item__info">
+                    <div class="footer__cars__item__info__name">Sedan</div>
+                    <div class="footer__cars__item__info__text">
+                      12:34 AM drop off
+                    </div>
+                  </div>
+                  <div class="footer__cars__item__price">&#8377;567.33</div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__cars__item">
+              <div class="container">
+                <div class="footer__cars__item__inner">
+                  <div class="footer__cars__item__photo">
+                    <img src="assets/img/car.png" alt="car" />
+                  </div>
+                  <div class="footer__cars__item__info">
+                    <div class="footer__cars__item__info__name">Luxury</div>
+                    <div class="footer__cars__item__info__text">
+                      12:46 AM drop off
+                    </div>
+                  </div>
+                  <div class="footer__cars__item__price">&#8377;1255.12</div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__cars__item">
+              <div class="container">
+                <div class="footer__cars__item__inner">
+                  <div class="footer__cars__item__photo">
+                    <img src="assets/img/car.png" alt="car" />
+                  </div>
+                  <div class="footer__cars__item__info">
+                    <div class="footer__cars__item__info__name">Hatchback</div>
+                    <div class="footer__cars__item__info__text">
+                      12:56 AM drop off
+                    </div>
+                  </div>
+                  <div class="footer__cars__item__price">&#8377;345.12</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="confirm">
+        <div class="container">
+          <div class="confirm__inner">
+            <button class="confirm__button">Confirm Booking</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/project.js"></script>
+    <script src="assets/js/distance.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLnv2hjU27ykmU1HrByJFkFrl7K-TVdeI&libraries=places&callback=initMap"
+    ></script>
+  </body>
+</html>
